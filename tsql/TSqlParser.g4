@@ -3593,7 +3593,7 @@ data_type
     | VARBINARY '(' DECIMAL | MAX ')'
     | VARCHAR '(' DECIMAL | MAX ')'
     | XML*/
-    : id IDENTITY? ('(' (DECIMAL | MAX) (',' DECIMAL)? ')')?
+    : (schema=id DOT)? id IDENTITY? ('(' (DECIMAL | MAX) (',' DECIMAL)? ')')?
     | INT
     | TINYINT 
     | SMALLINT
